@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "positions",
+  "info": {
+    "singularName": "position",
+    "pluralName": "positions",
+    "displayName": "Position",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "pitcher",
+        "catcher",
+        "first base",
+        "second base",
+        "shortstop",
+        "third base",
+        "left field",
+        "center field",
+        "right field",
+        "designated hitter"
+      ]
+    }
+  }
+}
