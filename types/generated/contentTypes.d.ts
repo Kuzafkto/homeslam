@@ -691,10 +691,10 @@ export interface ApiExtendedUserExtendedUser extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     surname: Attribute.String & Attribute.Required;
-    user: Attribute.Relation<
+    users_permissions_user: Attribute.Relation<
       'api::extended-user.extended-user',
       'oneToOne',
-      'admin::user'
+      'plugin::users-permissions.user'
     >;
     players: Attribute.Relation<
       'api::extended-user.extended-user',
