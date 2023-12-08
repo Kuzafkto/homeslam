@@ -1,0 +1,21 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()" (key.enter)="onSubmit()">
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="email" formControlName="email" type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="name" formControlName="name" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="surname" formControlName="surname" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="password" formControlName="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="nickname" formControlName="nickname" type="text"></ion-input>
+  </ion-item>
+
+  <div class="ion-text-end">
+    <ion-button style="text-transform: none;" [disabled]="!form.valid" (click)="onSubmit()">{{'Confirmar'}}</ion-button>
+  </div>
+</form>

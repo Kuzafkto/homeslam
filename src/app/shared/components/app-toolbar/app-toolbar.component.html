@@ -1,0 +1,20 @@
+<ion-toolbar>
+  <ion-title>
+    Home Slam
+  </ion-title>
+  <ion-title>
+    {{ user ? user : '' }}
+  </ion-title>
+  <ion-button fill="clear" aria-label="Logout" (click)="onLogout()" class="rounde">
+    <ion-icon slot="icon-only"  color="primary"  name="log-out-outline" aria-hidden="true"></ion-icon>
+  </ion-button>
+  <ion-button fill="clear" aria-label="Players" (click)="goToPlayers()" class="rounde">
+    <ion-icon slot="icon-only"  color="primary"  name="baseball-outline" aria-hidden="true"></ion-icon>
+  </ion-button>
+  <ion-button fill="clear" aria-label="About" (click)="goToAbout()" class="rounde">
+    <ion-icon slot="icon-only"  color="primary"  name="person" aria-hidden="true"></ion-icon>
+  </ion-button>
+  <ion-button fill="clear" aria-label="Teams" (click)="goToTeams()" class="rounde">
+    <ion-icon slot="icon-only"  color="primary"  name="people-outline" aria-hidden="true"></ion-icon>
+  </ion-button>
+</ion-toolbar>

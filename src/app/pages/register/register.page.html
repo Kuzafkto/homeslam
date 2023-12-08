@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <div class="logo">
+          <ion-thumbnail>
+            <img alt="logo of tasks" src="assets/imgs/logo-small.png" />
+          </ion-thumbnail>
+          <ion-text >Register</ion-text>
+        </div>
+        
+      </ion-card-header>
+      <ion-card-content>
+        <app-register-form (onsubmit)="onRegister($event)"></app-register-form>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

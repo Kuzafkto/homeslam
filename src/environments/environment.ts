@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiJsonServer: 'http://localhost:3000',
+  apiUrl: 'https://homeslam-service.onrender.com/api'
 };
 
 /*

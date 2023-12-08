@@ -1,0 +1,25 @@
+<ion-card appHighLight button (click)="onCardClick()" class="team-card-container">
+  <ion-button class="close-button" fill="clear" aria-label="Delete" (click)="onDeleteClick($event)">
+    <ion-icon slot="icon-only"  color="primary" name="trash" aria-hidden="true"></ion-icon>
+  </ion-button>
+
+  <div class="card-container">
+    <ion-card-header>
+      <div class="team-name-container">
+        <div class="ion-margin-start team-name">{{team?.data?.name | name:12}}</div>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+    <h3>Jugadores</h3>
+    <!-- Estructura adicional para los nombres de los jugadores -->
+    <div class="players-container">
+      <ng-container *ngFor="let player of team?.data?.players">
+        <!-- Ajustamos el tamaño del contenedor del jugador y del nombre -->
+        <div class="player-container">
+          <ion-text color="medium" class="player-name">{{ player.name |name:8}}</ion-text>
+        </div>
+      </ng-container>
+    </div>
+    </ion-card-content>
+  </div>
+</ion-card>

@@ -1,0 +1,64 @@
+.team-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  margin: 2%;
+}
+
+.team-name {
+  font-size: 2.5rem;
+  font-family: 'baseballFont', sans-serif;
+  color: #009a44
+}
+
+h3 {
+  color: var(--ion-color-primary);
+}
+
+.ion-margin-start {
+  --margin-start: 10px;
+}
+
+.team-name-container {
+  width: 100%;
+  text-align: center;
+}
+
+/* Nueva clase para la estructura de los nombres de los jugadores */
+/* ... Otros estilos ... */
+
+.player-container {
+  display: inline-block; /* Hace que el contenedor se ajuste al contenido */
+  border-radius: 5%;
+  background-color: #7e4d32;
+  margin: 10px;
+  padding: 2%;
+  overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+}
+
+ion-text.player-name {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Manejo de desbordamiento */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si el texto es demasiado largo */
+}
+
+/* ... Otros estilos ... */
+
+
+/* Estilo del círculo alrededor del nombre del jugador */
+.player-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Puedes ajustar el tamaño del círculo según sea necesario */
+  height: 40px;
+  border-radius: 50%;
+  background-color: #009A44; /* Puedes ajustar el color del círculo según sea necesario */
+  margin: 5px; /* Ajusta el espacio entre los círculos */
+}

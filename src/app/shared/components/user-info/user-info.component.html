@@ -1,0 +1,26 @@
+
+<ion-card appHighLight button (click)="onCardClick()">
+  <ion-button class="close-button" fill="clear" aria-label="Delete" (click)="onDeleteClick($event)">
+    <ion-icon slot="icon-only"  color="primary" name="trash" aria-hidden="true"></ion-icon>
+  </ion-button>
+  <ion-card-header>
+    <div style="display:flex;margin:10px;align-items:flex-end ">
+      <div class="ion-margin-start user-name" color="tertiary" >{{user?.name | titlecase}} {{user?.surname | uppercase | slice:0:1}}</div>
+      
+    </div>
+    
+    
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>
+        <h3>Id</h3>
+        <ion-text color="medium" class="ion-margin-start">{{user?.id}}</ion-text>
+        <h3>Nombre</h3>
+        <ion-text color="medium" class="ion-margin-start">{{user?.name}}</ion-text>
+        <h3>Apellidos</h3>
+        <ion-text color="medium" class="ion-margin-start">{{user?.surname}}</ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

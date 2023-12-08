@@ -1,0 +1,41 @@
+<ion-card appHighLight button (click)="onCardClick()">
+  <ion-button class="close-button" fill="clear" aria-label="Delete" (click)="onDeleteClick($event)">
+    <ion-icon slot="icon-only" color="primary" name="trash" aria-hidden="true"></ion-icon>
+  </ion-button>
+
+  <!-- Contenedor principal de la tarjeta -->
+  <div class="card-container">
+    <!-- Div con el nombre del jugador en grande -->
+    <div class="player-name-container">
+<!-- En el template -->
+<ion-text color="medium" class="player-name big-font">
+  {{ player?.data?.name|name:15 }} 
+</ion-text>
+
+    </div>
+    <div class="player-name-container">
+      <!-- En el template -->
+      <ion-text color="medium" class="player-name big-font">
+        {{ player?.data?.surname|name:20 }}
+      </ion-text>
+      
+          </div>
+
+    <!-- Resto de la información del jugador -->
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <ion-text color="medium">{{"Edad: "+ player?.data?.age }}</ion-text>
+        </ion-label>
+      </ion-item>
+      <div class="player-positions">
+        <div class="player-positions-row">
+          <ng-container *ngFor="let position of player?.data?.positions">
+            <!-- Utiliza la directiva positionImage para la imagen de posición -->
+            <div class="position-image" positionImage positionName="{{position.name}}"></div>
+          </ng-container>
+        </div>
+      </div>
+    </ion-card-content>
+  </div>
+</ion-card>

@@ -1,0 +1,34 @@
+<!--Version que si deberia de estar-->
+<ion-content  class="page-container">
+
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+<div class="input-container">
+
+    <ion-item>
+      <ion-title>Nombre:</ion-title>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+  </div>
+</form>
+
+  <div class="dragAndDrop">
+  <!-- Lista de jugadores disponibles -->
+  <cdk-drop cdkDropList #availablePlayersList="cdkDropList" [cdkDropListConnectedTo]="[currentTeamList]" [cdkDropListData]="availablePlayersArray" class="players-list" id="availablePlayersList" (cdkDropListDropped)="drop($event)">
+    <div>
+      <app-player-info [player]="player" *ngFor="let player of availablePlayers" cdkDrag class="player-card">
+      </app-player-info>
+  </div>
+</cdk-drop>
+
+  <!-- Equipo actual -->
+  <cdk-drop cdkDropList #currentTeamList="cdkDropList" [cdkDropListConnectedTo]="[availablePlayersList]" [cdkDropListData]="currentTeamPlayersArray" class="team-list" id="currentTeamList" (cdkDropListDropped)="drop($event)">
+      <app-player-info *ngFor="let player of currentTeamPlayers" cdkDrag class="player-card"
+      [player]="player">
+      </app-player-info>
+  </cdk-drop>
+</div>
+</div>
+  <ion-button expand="full" class="submitButton" type="submit" (click)="onSubmit()" [disabled]="!form.valid || !isFormDirty">Guardar</ion-button>
+</ion-content>
+

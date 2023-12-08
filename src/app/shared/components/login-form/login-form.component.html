@@ -1,0 +1,11 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Nombre de usuario" formControlName="username" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Contraseña" formControlName="password" type="password"></ion-input>
+  </ion-item>
+  <div class="ion-text-end">
+    <ion-button style="text-transform: none;" [disabled]="!form.valid" (click)="onSubmit()">{{'Confirmar'}}</ion-button>
+  </div>
+</form>
